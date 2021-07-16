@@ -20,6 +20,7 @@ exports.postAddProduct = (req, res, next) => {
 
 exports.getAllProduct = (req, res, next) => {
   try {
+    console.log(req.user);
     Product.find()
       .then((products) => {
         return res.status(200).json(products);
